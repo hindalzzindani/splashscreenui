@@ -16,9 +16,17 @@ class _OnboardingScreenState extends State<OnboardingView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: Stack(
         children: [
+          Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Colors.green[900]!, Colors.black!],
+                begin: Alignment.topRight,
+                end: Alignment.bottomRight,
+              ),
+            ),
+          ),
           PageView.builder(
             controller: _pageController,
             itemCount: onboardingData.length,
@@ -30,7 +38,7 @@ class _OnboardingScreenState extends State<OnboardingView> {
             itemBuilder: (context, index) {
               final data = onboardingData[index];
               return Padding(
-                padding: const EdgeInsets.all(16.0),
+                padding: const EdgeInsets.all(16.5),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -41,17 +49,17 @@ class _OnboardingScreenState extends State<OnboardingView> {
                         fit: BoxFit.contain,
                       ),
                     ),
-                    const SizedBox(height: 60),
+                    const SizedBox(height: 10),
                     Text(
                       data.title,
                       style: const TextStyle(
                         fontSize: 24,
                         fontWeight: FontWeight.bold,
-                        color: Colors.black,
+                        color: Colors.orange,
                       ),
                       textAlign: TextAlign.center,
                     ),
-                    const SizedBox(height: 30),
+                    const SizedBox(height: 20),
                     Text(
                       data.description,
                       style: const TextStyle(
@@ -60,6 +68,7 @@ class _OnboardingScreenState extends State<OnboardingView> {
                       ),
                       textAlign: TextAlign.center,
                     ),
+                    const SizedBox(height: 40),
                   ],
                 ),
               );
@@ -96,7 +105,8 @@ class _OnboardingScreenState extends State<OnboardingView> {
                   },
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(15),
+
+                      borderRadius: BorderRadius.circular(25),
                     ),
                     padding: const EdgeInsets.symmetric(
                         vertical: 15, horizontal: 40),
@@ -121,7 +131,7 @@ class _OnboardingScreenState extends State<OnboardingView> {
       height: 10,
       width: _currentIndex == index ? 20 : 10,
       decoration: BoxDecoration(
-        color: _currentIndex == index ? Colors.purple : Colors.grey,
+        color: _currentIndex == index ? Colors.orangeAccent : Colors.grey,
         borderRadius: BorderRadius.circular(10),
       ),
     );

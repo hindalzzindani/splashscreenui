@@ -7,7 +7,7 @@ import 'package:splash_screen/splash_screens/splash_screen_moving.dart';
 import 'package:splash_screen/splash_screens/splash_screen_moving.dart';
 import 'package:splash_screen/splash_screens/splash_screenwav.dart';
 import 'splash_screens/splash_screen.dart';
-
+//done by hind_*
 void main() {
   runApp(MyApp());
 }
