@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:splash_screen/splash_screens/onboarding_screen.dart';
+import 'package:splash_screen/splash_screens/onboardingview.dart';
 import 'package:splash_screen/splash_screens/splash_screen2.dart';
 import 'package:splash_screen/splash_screens/splash_screen3.dart';
 import 'package:splash_screen/splash_screens/splash_screen_moving.dart';
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SplashScreenMoving(),
+      home: OnboardingView(),
     );
   }
 }
