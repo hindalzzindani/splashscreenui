@@ -7,7 +7,7 @@ import 'package:splash_screen/splash_screens/splash_screen_moving.dart';
 import 'package:splash_screen/splash_screens/splash_screen_moving.dart';
 import 'package:splash_screen/splash_screens/splash_screenwav.dart';
 import 'splash_screens/splash_screen.dart';
-//done by hind_*
+//done by hindd_*
 void main() {
   runApp(MyApp());
 }
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OnboardingView(),
+      home: OnboardingScreen(),
     );
   }
 }
